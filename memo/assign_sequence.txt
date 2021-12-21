@@ -1,0 +1,8 @@
+ボタンを押すと、/gameに行き、
+Gameモデルを作成される。
+この作成されたモデルのidを元に、
+/game/:game.id/progress/newにリダイレクトする。
+リダイレクトされた後、新たにProgressモデルが作成され、Questionモデルの最初のレコードが呼び出される。
+
+Gameモデルと関連付けれられたprogressモデルが作成。
+
