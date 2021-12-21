@@ -8,9 +8,25 @@
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+
   </head>
 
   <body>
-    <%= yield %>
+  <div class="container text-center">
+    <header class="row mb-3">
+      <div class="col-12">
+        <%= image_tag 'akinator_app_logo.png', {width: 200} %>
+        <br>
+        <%= image_tag 'akinator_charactor.png', {width: 200} %>
+      </div>
+    </header>
+
+    <main class="row">
+      <div class="col-8 offset-2">
+        <%= yield %>
+      </div>
+    </main>
+  </div>
   </body>
 </html>
