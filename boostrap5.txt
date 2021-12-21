@@ -1,0 +1,16 @@
+Boostrap5の導入メモ
+yarn add bootstrap@next
+yarn add @popperjs/core
+
+app/javascript/packs/application.js
+
+mkdir -p app/javascript/stylesheets/
+touch app/javascript/stylesheets/application.js
+import 'bootstrap';
+import '../stylesheets/application';
+
+touch app/javascript/stylesheets/application.scss
+touch app/javascript/stylesheets/custom.scss
+
+@import '~bootstrap/scss/bootstrap';
+@import "custom";
