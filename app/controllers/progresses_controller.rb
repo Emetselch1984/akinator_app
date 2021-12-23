@@ -12,6 +12,8 @@ class ProgressesController < ApplicationController
     progress.assign_sequence
     progress.save!
 
+    @extract_comics = ExtractionAlgorithm.new(current_game).compute
+
     next_question = Question.next_question(current_game)
     if next_question.blank?
 
