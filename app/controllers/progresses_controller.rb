@@ -13,6 +13,10 @@ class ProgressesController < ApplicationController
     progress.save!
 
     @extract_comics = ExtractionAlgorithm.new(current_game).compute
+    if @extract_comics.count == 1
+      redirect_to challenge_game_path(current_game)
+      return
+    end
 
     next_question = Question.next_question(current_game)
     if next_question.blank?
