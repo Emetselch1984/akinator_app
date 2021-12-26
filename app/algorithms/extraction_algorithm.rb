@@ -68,3 +68,4 @@ class ExtractionAlgorithm
 
   end
 end
+
